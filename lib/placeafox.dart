@@ -88,10 +88,16 @@ class _PlaceAFoxState extends State<PlaceAFox> {
       bool didAddAnchor = await arAnchorManager.addAnchor(newAnchor);
       if (didAddAnchor) {
         anchors.add(newAnchor);
+        // var newNode = ARNode(
+        //     type: NodeType.webGLB,
+        //     uri:
+        //         "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Fox/glTF-Binary/Fox.glb",
+        //     scale: Vector3(0.2, 0.2, 0.2),
+        //     position: Vector3(0.0, 0.0, 0.0),
+        //     rotation: Vector4(1.0, 0.0, 0.0, 0.0));
         var newNode = ARNode(
-            type: NodeType.webGLB,
-            uri:
-                "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Fox/glTF-Binary/Fox.glb",
+            type: NodeType.localGLTF2,
+            uri: "models/gltf/Wolf-Blender-2.82a.gltf",
             scale: Vector3(0.2, 0.2, 0.2),
             position: Vector3(0.0, 0.0, 0.0),
             rotation: Vector4(1.0, 0.0, 0.0, 0.0));
